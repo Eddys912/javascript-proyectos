@@ -31,26 +31,43 @@ body {
   align-items: center;
 }
 
-input {
-  width: 100%;
-  height: 80px;
-  margin-bottom: 1.2rem;
-  padding: 1rem;
-  border: none;
-  outline: none;
-  font-size: 3rem;
-  text-align: end;
-  background-color: var(--secondary-color);
-  border-radius: var(--border-radius);
-  color: var(--secondary-text-color);
-}
-
 .calculator {
-  max-width: 400px;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   background-color: var(--bg-secondary-color);
   border-radius: var(--border-radius);
 }
+
+/* Display */
+
+.output-display {
+  height: 100px;
+  margin-bottom: 1.2rem;
+  padding: 0px 1rem;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+}
+
+input,
+.first-value {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 2.2rem;
+  text-align: end;
+  background-color: var(--secondary-color);
+  color: var(--secondary-text-color);
+}
+
+.first-value {
+  height: 40px;
+  font-size: 1.5rem;
+  padding: 10px 0px;
+}
+
+/* Main */
 
 button {
   width: var(--size-button);
@@ -68,19 +85,19 @@ button:hover {
   background-color: var(--secondary-hover-color);
 }
 
-.btn-op {
+.btn-action {
   background-color: var(--primary-color);
 }
 
-.btn-op:hover {
+.btn-action:hover {
   background-color: var(--primary-hover-color);
 }
 
 .buttons {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   background-color: var(--bg-secondary-color);
   justify-items: center;
-  align-items: center;
 }
